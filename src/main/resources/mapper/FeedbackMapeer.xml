@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yiqixue.yiqixue.houtai.htDao.FeedbackDao">
+    <select id="findAllFeedback" resultType="yiqixue.yiqixue.houtai.htModel.Feedback">
+        select * from Feedback
+    </select>
+
+    <select id="findAllByfid" resultType="yiqixue.yiqixue.houtai.htModel.Feedback">
+        select * from Feedback where fid=#{fid}
+    </select>
+
+    <delete id="deleteByfid" parameterType="yiqixue.yiqixue.houtai.htModel.Feedback">
+        delete from Feedback where fid=#{fid}
+    </delete>
+
+</mapper>

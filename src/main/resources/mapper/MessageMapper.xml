@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yiqixue.yiqixue.houtai.htDao.MessageDao">
+    <select id="findAllMessage" resultType="yiqixue.yiqixue.houtai.htModel.message">
+        select * from message
+    </select>
+
+    <select id="findAllByMid" resultType="yiqixue.yiqixue.houtai.htModel.message">
+        select * from message where mid=#{mid}
+    </select>
+
+    <delete id="deleteByMid" parameterType="yiqixue.yiqixue.houtai.htModel.message">
+        delete from message where mid=#{mid}
+    </delete>
+
+</mapper>

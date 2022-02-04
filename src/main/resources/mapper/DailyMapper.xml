@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yiqixue.yiqixue.houtai.htDao.DailyDao">
+    <select id="findAllDaily" resultType="yiqixue.yiqixue.houtai.htModel.Daily">
+        select * from Daily
+    </select>
+
+    <select id="findAllByDid" resultType="yiqixue.yiqixue.houtai.htModel.Daily">
+        select * from Daily where did=#{did}
+    </select>
+
+    <delete id="deleteByDid" parameterType="yiqixue.yiqixue.houtai.htModel.Daily">
+        delete from Daily where did=#{did}
+    </delete>
+
+</mapper>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yiqixue.yiqixue.houtai.htDao.TipoffDao">
+    <select id="findAllTipoff" resultType="yiqixue.yiqixue.houtai.htModel.Tipoff">
+        select * from Tipoff
+    </select>
+
+    <select id="findAllByTid" resultType="yiqixue.yiqixue.houtai.htModel.Tipoff">
+        select * from Tipoff where tid=#{tid}
+    </select>
+
+    <delete id="deleteByTid" parameterType="yiqixue.yiqixue.houtai.htModel.Tipoff">
+        delete from Tipoff where tid=#{tid}
+    </delete>
+
+</mapper>
